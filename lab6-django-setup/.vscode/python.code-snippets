@@ -1,0 +1,56 @@
+{
+  "PEP8 function": {
+    "prefix": "pep8func",
+    "body": [
+      "def ${1:name}(${2:args}):",
+      "    \"\"\"${3:Short summary.}",
+      "",
+      "    Args:",
+      "        ${2:args}: ${4:description}",
+      "",
+      "    Returns:",
+      "        ${5:description}",
+      "    \"\"\"",
+      "    $0"
+    ],
+    "description": "Function with PEP8 / PEP257 docstring"
+  },
+  "Main guard": {
+    "prefix": "pep8main",
+    "body": [
+      "def main():",
+      "    $0",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()"
+    ],
+    "description": "Main guard with two blank lines (PEP8)"
+  },
+  "Django view": {
+    "prefix": "djview",
+    "body": [
+      "from django.http import HttpResponse",
+      "",
+      "",
+      "def ${1:index}(request):",
+      "    return HttpResponse(\"${2:Hello, Django!}\")"
+    ],
+    "description": "Basic Django view"
+  },
+  "Django model": {
+    "prefix": "djmodel",
+    "body": [
+      "from django.db import models",
+      "",
+      "",
+      "class ${1:Item}(models.Model):",
+      "    name = models.CharField(max_length=${2:100})",
+      "    created = models.DateTimeField(auto_now_add=True)",
+      "",
+      "    def __str__(self):",
+      "        return self.name"
+    ],
+    "description": "Basic Django model"
+  }
+}

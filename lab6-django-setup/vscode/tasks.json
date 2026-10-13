@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check Environment",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe check_env.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Django Server",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe manage.py runserver",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Format All (autopep8)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe -m autopep8 --in-place --recursive --max-line-length=79 .",
+      "problemMatcher": []
+    }
+  ]
+}
